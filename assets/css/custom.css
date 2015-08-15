@@ -1,1 +1,5 @@
 /* Add here all your css styles (customizations) */
+.navbar-brand {
+    float: left;
+    padding: 5px;
+} 
