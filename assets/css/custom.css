@@ -1,5 +1,56 @@
-/* Add here all your css styles (customizations) */
+body {
+font-family: "Andale Mono", AndaleMono, monospace,'Open Sans', Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #585f69;
+    margin-top: 5px;
+    text-shadow: none;
+    font-weight: normal;
+    font-family: "Andale Mono", AndaleMono, monospace,'Open Sans', Arial,sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
 .navbar-brand {
     float: left;
     padding: 5px;
-} 
+}
+.rs-caption-1:after, .rs-caption-1:before {
+    content: "";
+}
+.navbar-brand{
+  font-size: 25px;
+  font-weight: 200;
+    line-height: 20px;
+}
+.navbar-default {
+    border-bottom: none;
+    background-color: #f8f8f8;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+    font-size: 12.5px;
+    text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .navbar-brand{
+    font-size: 20px;
+    font-weight: 200;
+      line-height: 20px;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background: #333;
+  }
+}
+@media (min-width: 992px){
+  .col-md-4 {
+      width: 33.33333333333333%;
+      min-height: 250px;
+  }
+}
+body.dark .service-box-v1 .service-block:hover {
+    box-shadow: 0 0 8px #fff;
+}
+body.dark .service-box-v1 .service-block {
+    background: #171717;
+    border-color: #171717;
+    height: 100%;
+}

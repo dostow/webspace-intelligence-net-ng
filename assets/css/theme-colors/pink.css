@@ -117,3 +117,19 @@ i.icon-bg-u {
 .copyright-section i.back-to-top:hover {
     color: #cc0066;
 }
+
+.dropcap-bg {
+    background: #cc0066;
+}
+a {
+    color: #cc0066;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+::selection {
+    color: #fff;
+    background: #cc0066;
+}
