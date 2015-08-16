@@ -1,0 +1,7 @@
+@font-face {
+  font-family: MyHelvetica;
+  src: local("Andale Mono"),
+       local("AndaleMono"),
+       url(font/andale/AndaleMono.ttf);
+  font-weight: normal;
+}
