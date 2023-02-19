@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand{
   font-size: 25px;
   font-weight: 200;
-    line-height: 20px;
+  line-height: 35px;
 }
 .navbar-default {
     border-bottom: none;
@@ -32,9 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 600px) {
   .navbar-brand{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
-      line-height: 20px;
+    line-height: 35px;
   }
   .navbar-default .navbar-toggle .icon-bar {
     background: #333;
@@ -53,4 +53,45 @@ body.dark .service-box-v1 .service-block {
     background: #171717;
     border-color: #171717;
     height: 100%;
+}
+.company{
+  color: #cc0066;
+}
+.contacts-in li i {
+    width: 35px;
+    padding: 8px;
+    font-size: 18px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    float: left;
+}
+share-button {
+    position: relative;
+    font-size: 16px;
+    color: #cc0066;
+    background: none;
+    padding: 5px 10px 5px 1.75em;
+    border-radius: 5px;
+    font-family: "Andale Mono", AndaleMono, monospace,'Open Sans', Arial,sans-serif;
+     font-weight: normal;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    text-transform: none;
+}
+share-button:hover {
+background: none;
+color: #fff;
+}
+/*body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: #fff;
+  font-weight: 200;
+}
+body.dark p, li, li a {
+  color: #fafafa;
+}*/
+
+.thumbnail-style {
+  text-align: center;
 }

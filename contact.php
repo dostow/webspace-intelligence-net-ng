@@ -34,24 +34,32 @@ function sendMailgun($data) {
 
   $api_key = 'key-aae2b80f42abb6fe502c5ff9fea8d31e';
   $api_domain = 'idcgroupltd.com';
-  $send_to = 'dev@idcgroupltd.com';
+  $send_to = 'idcgroupltd@gmail.com';
 
+  // sumbission data
+  $ipaddress = $_SERVER['REMOTE_ADDR'];
+  $date = date('d/m/Y');
+  $time = date('H:i:s');
+
+  // form data
   $name = $data['name'];
-  $email = $data['email'];
-  $content = $data['message'];
+  $postcontent = $data['message'];
+  $reply = $data['email'];
 
-  $messageBody = "Contact: $name ($email)\n\nMessage: $content";
+  $messageBody = "<p>You have received a new message from {$name}</p>
+                {$postcontent}
+                <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
 
   $config = array();
   $config['api_key'] = $api_key;
   $config['api_url'] = 'https://api.mailgun.net/v3/'.$api_domain.'/messages';
 
   $message = array();
-  $message['from'] = $email;
+  $message['from'] = $reply;
   $message['to'] = $send_to;
-  $message['h:Reply-To'] = $email;
-  $message['subject'] = $data['subject'];
-  $message['text'] = $messageBody;
+  $message['h:Reply-To'] = $reply;
+  $message['subject'] = "New Message from intelligence.net.ng Contact Form";
+  $message['html'] = $messageBody;
 
   $curl = curl_init();
 
@@ -66,7 +74,6 @@ function sendMailgun($data) {
   curl_setopt($curl, CURLOPT_POSTFIELDS,$message);
 
   $result = curl_exec($curl);
-
   curl_close($curl);
   return $result;
 
